@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 /* eslint-disable react/prop-types */
 function Friend({ friend }) {
   return (
@@ -22,7 +24,7 @@ function Friend({ friend }) {
           </p>
         )}
 
-        <button className = 'button'>Select</button>
+        <Button>Select</Button>
       </li>
     </div>
   );
