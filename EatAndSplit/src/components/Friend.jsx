@@ -1,10 +1,13 @@
 import Button from "./Button";
 
 /* eslint-disable react/prop-types */
-function Friend({ friend }) {
+function Friend({ friend, onSelection, selectedFriend }) {
+
+  const isSelected = selectedFriend?.id === friend.id;
+
   return (
     <div>
-      <li>
+      <li className={isSelected ? 'selected' : ''}>
         <img src={friend.image} alt={friend.name} />
         <h3>{friend.name}</h3>
 
@@ -24,7 +27,7 @@ function Friend({ friend }) {
           </p>
         )}
 
-        <Button>Select</Button>
+        <Button onClick={() => onSelection(friend)}>{isSelected ? 'Close' : 'Select'}</Button>
       </li>
     </div>
   );
