@@ -1,9 +1,7 @@
-import { initialFriends } from "../App";
+/* eslint-disable react/prop-types */
 import Friend from "./Friend";
 
-function Friendslist() {
-
-    const friends = initialFriends;
+function Friendslist({friends}) {
 
 
     return (
